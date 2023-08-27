@@ -20,7 +20,8 @@
     "humps": "^2.0.1",
     "joi": "^17.9.2",
     "mongodb": "^5.8.1",
-    "mongoose": "^7.4.4"
+    "mongoose": "^7.4.4",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
