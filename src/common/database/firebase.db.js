@@ -19,7 +19,6 @@ const firebaseConfig = {
           messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
           appId: process.env.FIREBASE_APP_ID,
         };
-console.log(firebaseConfig)
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
@@ -35,6 +34,6 @@ const userNameAPI = async function getUser(db) {
   }
 
 const userApiList = await userNameAPI(db) 
-console.log(userApiList)
 
-export default db
+
+export default userApiList
