@@ -4,11 +4,10 @@ import fs from 'fs';
 
 const swaggerDocument = YAML.parse(fs.readFileSync('./swagger.yaml', 'utf8'));
 
-export  function setupSwaggerUI() {
-          return swaggerUi.serve;
+export function setupAndServeSwaggerUI() {
+          return [
+            '/api-docs',
+            swaggerUi.serve,
+            swaggerUi.setup(swaggerDocument)
+          ];
         }
-        
-export  function serveSwaggerUI() {
-          return swaggerUi.setup(swaggerDocument);
-        }
-
